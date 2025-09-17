@@ -10,7 +10,7 @@
 ```
 ## Solution
 
-The challenge gives us only a binary [FILE HERE].
+The challenge gives us only a binary [chal](./chal).
 When opening the file in Ghidra, we can see that `main` appears as so:
 
 ```c
