@@ -1,2 +1,2 @@
 # CTF-Writeups
-A REpository for any CTF writeups I write
+A Repository for any CTF writeups I write
