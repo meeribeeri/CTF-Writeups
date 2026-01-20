@@ -79,6 +79,7 @@ Now, it is likely possible to also find an address in `libc.so.6` through this m
 That gave me a libc leak, which I then used to perform a ret2libc and call system("/bin/sh"). Doing so on remote allowed me to then run "cat flag.txt" to get the flag, though this took me significantly longer than I would have liked due to the number of small mistakes and segfaults that I got, mostly with bad offsets and using the wrong libc. Also I used `system` and not `syscall` because I have not been able to get `syscall` to work for me recently.
 
 ## Script
+```py
 from pwn import *
 
 #p = process("./warehouse_patched")
