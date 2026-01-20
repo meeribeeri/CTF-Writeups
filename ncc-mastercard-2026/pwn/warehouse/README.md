@@ -76,7 +76,7 @@ Log [2026-01-20 14:38:11]: Viewed accounting logs
 Admittedly I am not completely certain as to why this occurs. My best guess as to why is that there is some format string bug in `create_product` that allows this to work.  
 No matter the reason, by slowly printing out more and more of the stack through this vulnerability, and checking what each address or piece of memory is about with pwndbg, we can find both the stack canary, located at %29$p and a specific address linking to `create_product+265` at %11$p. This allows us to bypass both the stack canary and PIE.  
 Now, it is likely possible to also find an address in `libc.so.6` through this method, however I did not. Instead what I did is find the offset from the start of the program in memory to the global offset table, and called puts with `rdi` being the address of the GOT entry of `puts`.  
-That gave me a libc leak, which I then used to perform a ret2libc and call system("/bin/sh"). Doing so on remote allowed me to then run "cat flag.txt" to get the flag.
+That gave me a libc leak, which I then used to perform a ret2libc and call system("/bin/sh"). Doing so on remote allowed me to then run "cat flag.txt" to get the flag, though this took me significantly longer than I would have liked due to the number of small mistakes and segfaults that I got, mostly with bad offsets and using the wrong libc. Also I used `system` and not `syscall` because I have not been able to get `syscall` to work for me recently.
 
 ## Script
 from pwn import *
