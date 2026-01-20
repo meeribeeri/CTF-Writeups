@@ -1,8 +1,5 @@
 # Chirp
-## Mitigations
-```
 
-```
 ## Solution
 We are given a .s file that contains the assembly for some functions in the binary, alongside the binary itself. From the .s file, we can see a function that pops a shell, so we can assume that we need to run that function somehow. 
 ```asm

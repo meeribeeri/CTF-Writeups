@@ -1,0 +1,1 @@
+nccctf{FAKE_FLAG}

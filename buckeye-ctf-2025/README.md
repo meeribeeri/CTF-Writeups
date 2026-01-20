@@ -4,6 +4,6 @@
 
 ### pwn
 
- - [hexv]
- - [character-assassination]
- - [chirp]
+ - [hexv](./hexv)
+ - [character-assassination](./character-assassination)
+ - [chirp](./chirp)
