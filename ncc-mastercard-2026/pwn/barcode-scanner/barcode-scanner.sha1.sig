@@ -1,1 +1,0 @@
-c9d77707b19c774379edec620a859468db2cd9c8 barcode-scanner
