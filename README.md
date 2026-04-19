@@ -8,3 +8,4 @@ A Repository for any CTF writeups I write
 
 ## 2026
  * [The Great Canadian CTF Tournament 2026](./the-great-canadian-ctf-2026/)
+ * [PicoCTF 2026](./picoCTF-2026/)
